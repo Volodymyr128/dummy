@@ -6,7 +6,7 @@ pipeline {
         stage('Building our image') {
             steps {
                 script {
-                    dockerImage = docker.build "volodymyr128/mypython"
+                    dockerImage = docker.build "volodymyr128/mypython:1.$BUILD_NUMBER"
                 }
             }
         }
